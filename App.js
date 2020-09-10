@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   StyleSheet,
   Text,
@@ -6,10 +6,17 @@ import {
   SafeAreaView,
   View,
   Platform,
+  TextInput
 } from "react-native";
 import CalculatorButton from "./components/CalculatorButton";
 
+var displayValue = 0;
+
 export default function App() {
+
+  
+  const [displayValue1, setDisplayValue] = useState("0");
+
   // All buttons that need to be rendered
   const buttons = [
     ["AC", "⌫"],
@@ -67,10 +74,9 @@ export default function App() {
     return displayValue;
   }
 
-  var displayValue = 0;
-
   // Handling the output according to the button which user pressed
   function handleInput(input) {
+  
     switch (input) {
       case "0":
         displayValue = displayValue === 0 ? displayValue : displayValue + input;
@@ -95,7 +101,7 @@ export default function App() {
       case ".":
         let str = displayValue.toString();
         str = str.slice(str.length - 1, str.length);
-        //If the last digit was'nt any operator or "." only then append the decimal
+        //If the last digit is not an operator or "." only then append the decimal
         displayValue =
           str !== "." &&
           str !== "/" &&
@@ -127,13 +133,15 @@ export default function App() {
         displayValue = displayValue === 0 ? input : displayValue + input;
         break;
     }
+    displayValue = displayValue.toString();
     console.log(displayValue);
+    setDisplayValue(displayValue);
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.resultContainer}>
-        <Text style={styles.resultText}>{displayValue}</Text>
+        <TextInput value={displayValue1} style={styles.resultText} />
       </View>
 
       <View style={styles.inputContainer}>{renderButtons()}</View>
@@ -145,7 +153,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   resultContainer: {
     flex: 1,
