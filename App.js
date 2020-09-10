@@ -79,7 +79,7 @@ export default function App() {
   
     switch (input) {
       case "0":
-        displayValue = displayValue === 0 ? displayValue : displayValue + input;
+        displayValue = displayValue == 0 ? displayValue : displayValue + input;
         break;
 
       case "-":
@@ -120,17 +120,17 @@ export default function App() {
         let str1 = displayValue.toString();
         displayValue =
           displayValue.length <= 1
-            ? 0
+            ? "0"
             : str1.substr(0, displayValue.length - 1);
         break;
 
       case "AC":
-        displayValue = 0;
+        displayValue = "0";
         break;
 
       // This will cover all the buttons like 1, 2, 3, 4, 5, 6, 7, 8, 9
       default:
-        displayValue = displayValue === 0 ? input : displayValue + input;
+        displayValue = displayValue == 0 ? input : displayValue + input;
         break;
     }
     displayValue = displayValue.toString();
