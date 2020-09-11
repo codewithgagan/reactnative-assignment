@@ -12,12 +12,12 @@ var Style = StyleSheet.create({
     },
 
     displayText: {
-        color: 'white',
+        color: 'black',
         fontSize: 38,
         fontWeight: 'bold',
         textAlign: 'right',
         padding: 20
-    }, 
+    },
 
     inputContainer: {
         flex: 7,
