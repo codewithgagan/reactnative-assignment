@@ -19,10 +19,21 @@ const inputButtons = [
 ];
 
 class App extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      prevInput : 0,
+      inputValue : 0,
+      symbol : null
+    }
+  }
   render(){
     return(
       <View style = {Style.rootContainer}>
-        <View style = {Style.displayContainer}></View>
+        <View style = {Style.displayContainer}>
+            <Text style = {Style.displayText}> {this.state.inputValue}</Text>
+        </View>
         <View style = {Style.inputContainer}>
                     {this._renderInputButtons()}
         </View>
@@ -41,7 +52,9 @@ class App extends Component{
                 let input = row[i];
 
                 inputRow.push(
-                    <InputButton value={input} key={r + "-" + i} 
+                    <InputButton value={input} 
+                    highlight = {this.state.symbol===input}
+                    key={r + "-" + i} 
                     onPress = {this._onInputButtonPress.bind(this, input)}/>
                 );
             }
@@ -53,7 +66,55 @@ class App extends Component{
     }
 
     _onInputButtonPress(input){
-      alert(input);
+      switch(typeof input) {
+        case 'number' :
+          return this.handleNumber(input)
+        case 'string' :
+          return this.handleString(input)
+      }
+    }
+
+    handleNumber(num) {
+      let inputValue = (this.state.inputValue * 10) + num;
+      this.setState({
+        inputValue: inputValue
+      })
+    }
+
+    handleString(str){
+      switch (str) {
+        case '/':
+        case '*':
+        case '+':
+        case '-':
+            this.setState({
+                selectedSymbol: str,
+                previousInputValue: this.state.inputValue,
+                inputValue: 0
+            });
+            break;
+        case '=':
+              let symbol = this.state.selectedSymbol,
+                  inputValue = this.state.inputValue,
+                  previousInputValue = this.state.previousInputValue;
+
+              if (!symbol) {
+                  return;
+              }
+
+              this.setState({
+                  previousInputValue: 0,
+                  inputValue: eval(previousInputValue + symbol + inputValue),
+                  selectedSymbol: null
+              });
+              break;
+        case '.' : alert('clear');
+                  this.setState({
+                    prevInput : 0,
+                    inputValue: 0,
+                    selectedSymbol : null
+                  })
+      }
     }
 }
 
