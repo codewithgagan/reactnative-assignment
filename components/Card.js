@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, View, Button, Text, StyleSheet} from "react-native";
 
 function Card(props) {
-    console.log(props);
+    
     return (
         <View style={styles.card}>
             <Image style={styles.image} source={{
@@ -12,7 +12,7 @@ function Card(props) {
             }} />
             <Text style={styles.title}>Tanya Rempel</Text>
             <Text style={styles.content}>Lorem ipsum dolor sit amet, adipiscing</Text>
-            <Button onPress={() => {props.navigation.navigate("Detail")}} title="Read More ..." />
+            <Button onPress={() => {props.props.navigation.navigate("Detail")}} title="Read More ..." />
         </View>
     )
 }

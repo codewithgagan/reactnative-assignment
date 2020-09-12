@@ -2,15 +2,15 @@ import React from 'react';
 import {StyleSheet, SafeAreaView, ScrollView, Text, Platform, StatusBar} from "react-native";
 import Card from "../components/Card";
 
-function Home() {
+function Home(props) {
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView contentContainerStyle={styles.centerAlign}>
                 <Text style={styles.heading}>Welcome To our App</Text>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card props={props} />
+                <Card props={props} />
+                <Card props={props} />
+                <Card props={props} />
             </ScrollView>
         </SafeAreaView>
     )
