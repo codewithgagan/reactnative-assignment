@@ -57,15 +57,20 @@ export default function App() {
 
   function noRepitionLogic(input, displayValue, [operator1, operator2, operator3]) {
     
-    let str2 = displayValue.toString();
-    let newString = str2.substr(0, str2.length - 1);
-    str2 = str2.slice(str2.length - 1, str2.length); // get the last digit
+    let str3 = displayValue.toString();
+    let newString = str3.substr(0, str3.length - 1);
+    let str2 = str3.slice(str3.length - 1, str3.length); // get the last digit
+
+    if(displayValue == 0) {
+      displayValue = input;
+      return displayValue;
+    }
 
     // Changing operator to the new operator if user pressed a different button by mistake
     // Example if user pressed / then * then current operator is *
     // This will be done only when last digit is not "." as 12./2 is nothing
     displayValue =
-      str2 !== input && str2 !== "."
+      str2 !== input && str2 !== "." // last digit is not the current operator and not "."
         ? str2 === operator1 || str2 === operator2 || str2 === operator3
           ? newString + input
           : displayValue + input
@@ -109,7 +114,7 @@ export default function App() {
           str !== "-" &&
           str !== "+"
             ? displayValue + input
-            : displayValue;
+            : str !== "." ? displayValue + "0." : displayValue;
         break;
 
       case "=":
@@ -141,7 +146,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.resultContainer}>
-        <TextInput value={displayValue1} style={styles.resultText} />
+        <Text style={styles.resultText} >{displayValue1}</Text>
       </View>
 
       <View style={styles.inputContainer}>{renderButtons()}</View>
