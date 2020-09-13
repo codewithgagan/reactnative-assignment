@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import ContactInfo from "../components/ContactInfo";
 
+// This function will create a contact us page used in drawer navigation
+// In this we are passing props in ContactInfo like style for CSS, country where office is, phone number and email ID of that office
 function Contact() {
   return (
     <View style={styles.container}>

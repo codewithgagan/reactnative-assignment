@@ -10,8 +10,9 @@ import {
   Platform,
 } from "react-native";
 
+// This is basically a Detail Screen which user will see only when a user presses a Read More button on Home Screen
+// Props are used here for React Navigation only
 function Detail(props) {
-  console.log(props);
   return (
     <ScrollView>
       <View style={styles.container}>

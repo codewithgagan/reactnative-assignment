@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
+// Tab 3 in Top Tabs
 function Tab3() {
   return (
     <View style={styles.container}>

@@ -22,6 +22,7 @@ const MaterialTopTabs = createMaterialTopTabNavigator();
 // const MaterialBottomTabs = createMaterialBottomTabNavigator();
 
 export default function App() {
+  // This is the part which will help us to navigate through different pages i.e. First from Home to Detail then Detail to Top Tabs
   function stackNavigation() {
     return (
       <Stack.Navigator>
@@ -38,16 +39,41 @@ export default function App() {
     );
   }
 
+  // This function will return the Top Tabs navigation and is used inside stackNavigation function
   function manageTopTabs() {
     return (
       <MaterialTopTabs.Navigator>
-        <MaterialTopTabs.Screen name="Tab 1" component={Tab1} />
-        <MaterialTopTabs.Screen name="Tab 2" component={Tab2} />
+        <MaterialTopTabs.Screen
+          name="Tab 1"
+          options={{
+            title: "Developers",
+          }}
+          component={Tab1}
+        />
+        <MaterialTopTabs.Screen
+          name="Tab 2"
+          options={{
+            title: "About Us",
+          }}
+          component={Tab2}
+        />
         <MaterialTopTabs.Screen name="Tab 3" component={Tab3} />
       </MaterialTopTabs.Navigator>
     );
   }
 
+  // This function will return the Bottom Tabs navigation
+  function manageBottomTabs() {
+    return (
+      <MaterialBottomTabs.Navigator>
+        <MaterialBottomTabs.Screen name="Tab 1" component={Tab1} />
+        <MaterialBottomTabs.Screen name="Tab 2" component={Tab2} />
+        <MaterialBottomTabs.Screen name="Tab 3" component={Tab3} />
+      </MaterialBottomTabs.Navigator>
+    );
+  }
+
+  // This is the main container and will contain Drawer navigation
   return (
     <NavigationContainer>
       <Drawer.Navigator>

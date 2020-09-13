@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 
+// This function will be used for Tab1 in Top Tabs navigation
+// This will create a Developer Card in which a round image name (source of image/ imageName), along with name of Developer and description of the developer is passed in props
 function DeveloperCard({ imageName, name, description }) {
   return (
     <View style={styles.container}>

@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
+// This is the 2nd tab for Top Tabs (About Us Page)
 function Tab2() {
   return (
     <View style={styles.container}>

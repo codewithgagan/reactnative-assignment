@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import DeveloperCard from "../components/DeveloperCard";
 
+// This is a Top Tab which is retrieved after clicking a button on Detail Screen
 function Tab1() {
   return (
     <View style={styles.container}>
