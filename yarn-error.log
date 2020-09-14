@@ -1,0 +1,61 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add native-base --save
+
+PATH: 
+  C:\Python38\Scripts\;C:\Python38\;C:\Program Files\Java\jdk-14.0.1\bin;C:\MinGW\bin;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\Users\user\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\user\AppData\Local\Android\Sdk;C:\Users\user\AppData\Local\Android\Sdk\platform-tools;C:\Users\user\AppData\Local\Android\Sdk\emulator;C:\Users\user\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\user\AppData\Local\Programs\Python\Python37-32\;c:\windows\system32;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\.babun;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.1\bin;;C:\Users\user\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Hugo\bin;C:\Users\user\flutter\bin;C:\Users\user\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.18.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\news-api-tutorial\reactnative-assignment\node_modules\@babel\core\node_modules\json5\dist'
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "@react-native-community/masked-view": "^0.1.10",
+      "@react-navigation/bottom-tabs": "^5.8.0",
+      "@react-navigation/core": "^5.12.3",
+      "@react-navigation/drawer": "^5.9.0",
+      "@react-navigation/material-bottom-tabs": "^5.2.16",
+      "@react-navigation/material-top-tabs": "^5.2.16",
+      "@react-navigation/native": "^5.7.3",
+      "@react-navigation/stack": "^5.9.0",
+      "expo": "~38.0.8",
+      "expo-status-bar": "^1.0.2",
+      "react": "~16.11.0",
+      "react-dom": "~16.11.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
+      "react-native-gesture-handler": "~1.6.0",
+      "react-native-reanimated": "~1.9.0",
+      "react-native-safe-area-context": "~3.0.7",
+      "react-native-screens": "~2.9.0",
+      "react-native-tab-view": "^2.15.1",
+      "react-native-web": "~0.11.7"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.8.6",
+      "babel-preset-expo": "~8.1.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
