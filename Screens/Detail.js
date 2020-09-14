@@ -40,7 +40,13 @@ function Detail(props) {
             onPress={() => {
               props.navigation.navigate("Top Tabs");
             }}
-            title="See More Tabs"
+            title="See Top Tabs"
+          />
+          <Button
+            onPress={() => {
+              props.navigation.navigate("Bottom Tabs");
+            }}
+            title="See Bottom Tabs"
           />
         </View>
       </View>

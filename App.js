@@ -1,5 +1,11 @@
 import React from "react";
-
+// npm Libraries
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import "react-native-gesture-handler";
 //Screens
 import Detail from "./Screens/Detail";
 import Home from "./Screens/Home";
@@ -8,18 +14,12 @@ import Tab1 from "./Screens/Tab1";
 import Tab2 from "./Screens/Tab2";
 import Tab3 from "./Screens/Tab3";
 
-// npm Libraries
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-// import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import "react-native-gesture-handler";
+
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 const MaterialTopTabs = createMaterialTopTabNavigator();
-// const MaterialBottomTabs = createMaterialBottomTabNavigator();
+const MaterialBottomTabs = createMaterialBottomTabNavigator();
 
 export default function App() {
   // This is the part which will help us to navigate through different pages i.e. First from Home to Detail then Detail to Top Tabs
@@ -35,6 +35,7 @@ export default function App() {
         />
         <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen name="Top Tabs" children={manageTopTabs} />
+        <Stack.Screen name="Bottom Tabs" children={manageBottomTabs} />
       </Stack.Navigator>
     );
   }

@@ -27,10 +27,8 @@ function Contact() {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30,
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     textAlign: "center",
+    paddingTop: 20,
   },
   container: {
     backgroundColor: "#0ba4f4",
