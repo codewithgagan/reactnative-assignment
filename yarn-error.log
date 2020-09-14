@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add native-base --save
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add native-base
 
 PATH: 
   C:\Python38\Scripts\;C:\Python38\;C:\Program Files\Java\jdk-14.0.1\bin;C:\MinGW\bin;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\Users\user\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\user\AppData\Local\Android\Sdk;C:\Users\user\AppData\Local\Android\Sdk\platform-tools;C:\Users\user\AppData\Local\Android\Sdk\emulator;C:\Users\user\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\user\AppData\Local\Programs\Python\Python37-32\;c:\windows\system32;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\.babun;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.1\bin;;C:\Users\user\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Hugo\bin;C:\Users\user\flutter\bin;C:\Users\user\AppData\Roaming\npm

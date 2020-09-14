@@ -31,20 +31,22 @@ class Home extends React.Component {
     )
   }
   render(){
-    alert(this.state.data);
+    //alert(this.state.data);
     let view = this.state.isLoading ? (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <ActivityIndicator animating={this.state.isLoading} color="#00f0ff" />
         <Text style={{marginTop: 10}} children="Please Wait.." />
       </View>
     ) : (
-      <FlatList
-        dataArray={this.state.data}
-        renderItem={(item) => {
-            return (
-              <Card  data={item} />
-            )
-        }} />
+      /*<List
+      dataArray={this.state.data}
+      renderRow={(item) => {
+          return (
+           /* <Card /*onPress={this.handleItemDataOnPress} data={item} /> 
+          )
+      }} /> */
+      <FlatList data={this.state.data} 
+      renderItem={({item}) => <Card data = {item}/>} />
     )
     console.log(view.props);
     return (

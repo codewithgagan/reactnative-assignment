@@ -9,21 +9,22 @@ import { Image, View, Button, Text, StyleSheet } from "react-native";
 class Card extends React.Component {
     constructor(props) {
         super(props);
-        this.data = props.data;
+        this.data = props.data
     }
-
+    // Need to change button to direct to this.data.url
     render(){
+        //alert('Card', this.data.title)
         return (
             <View style={styles.card}>
                 <Image style={styles.image} source={{
                     height: 300,
                     width: 300,
-                    uri: /*this.data.urlToImage != null ? this.data.urlToImage: */ "http://placeimg.com/640/480/food"
-                }} />
-                alert
-                <Text style={styles.title}>{this.data.title}</Text>
-            <Text style={styles.content}>{this.data.description}</Text>
-                <Button onPress={() => {props.props.navigation.navigate("Detail")}} title="Read More ..." />
+                    uri: this.data.urlToImage != null ? this.data.urlToImage: "http://placeimg.com/640/480/food"
+                }} /> 
+                <Text style={styles.title} numberOfLines = {2}>{this.data.title}</Text>
+            <Text style={styles.content} numberOfLines = {3}>{this.data.description}</Text>
+                <Button onPress={() => /*{props.props.navigation.navigate("Detail")} */ 
+                        this.data.url} title="Read More ..." />
             </View>
         )
     }
